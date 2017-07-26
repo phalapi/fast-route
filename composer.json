@@ -1,0 +1,28 @@
+{
+    "name": "phalapi/fast-route",
+    "description": "PhalApi 2.x 扩展类库 - FastRoute路由，可以通过配置实现自定义路由配置，从而轻松映射到PhalApi中的service接口服务。",
+    "keywords": [
+        "phalapi", "phalapi-fast-route", "fast-route"
+    ],
+    "license": "GPL-3.0+",
+    "homepage": "https://www.phalapi.net/",
+    "type": "library",
+    "authors": [
+        {
+            "name": "dogstar huang",
+            "email": "chanzonghuang@gmail.com",
+            "homepage": "http://my.oschina.net/dogstar",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phalapi/kernal": "2.0.*",
+        "nikic/fast-route": "1.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhalApi\\FastRoute\\": "src"
+        }
+    } 
+}
