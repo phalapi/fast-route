@@ -62,14 +62,13 @@
 ### (1)入口注册
 ```php
 //$ vim ./public/index.php
+require_once dirname(__FILE__) . '/init.php';
 
 //显式初始化，并调用分发
 \PhalApi\DI()->fastRoute = new PhalApi\FastRoute\Lite();
 \PhalApi\DI()->fastRoute->dispatch();
 
-/** ---------------- 响应接口请求 ---------------- **/
-
-$pai = new PhalApi();
+$pai = new \PhalApi\PhalApi();
 $pai->response()->output();
 ```
   
