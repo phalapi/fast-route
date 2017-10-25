@@ -10,7 +10,7 @@
 ```
 {
     "require": {
-        "phalapi/fast-route": "2.0.*"
+        "phalapi/fast-route": "dev-master"
     }
 }
 ```
