@@ -48,7 +48,7 @@
 ```
     # 最终交由index.php文件处理
     location / {
-        try_files $uri $uri/ $uri/index.php;
+        try_files $uri $uri/ $uri/index.php?$query_string;
     }
 
     # 匹配未找到的文件路径
