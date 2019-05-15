@@ -87,8 +87,13 @@ class Lite {
 
         // Fetch method and URI from somewhere
         $httpMethod = $_SERVER['REQUEST_METHOD'];
-        $uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-
+        
+        // 获取基准 url
+        $base_url = \PhalApi\DI()->config->get('app.FastRoute.base_url');
+        // 排除基准 url，取出真实路由
+        $reqestUriFixed = substr($_SERVER['REQUEST_URI'], strlen($base_url), strlen($_SERVER['REQUEST_URI']) + 1);
+        
+        $uri = urldecode(parse_url($reqestUriFixed, PHP_URL_PATH));
         $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
         switch ($routeInfo[0]) {
             case \FastRoute\Dispatcher::NOT_FOUND:
