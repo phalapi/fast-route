@@ -81,7 +81,7 @@ $pai->response()->output();
   等效于：http://library.phalapi.com/?service=Site.Index
  
   http://library.phalapi.com/examples/curd/get/1
-  等效于：http://library.phalapi.com/?service=Examples_CURD.Get=1
+  等效于：http://library.phalapi.com/?service=Examples_CURD.Get&id=1
 ```
  
 ### (2)非法访问
